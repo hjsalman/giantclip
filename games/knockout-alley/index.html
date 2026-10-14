@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Knockout Alley | GiantClip</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Bungee&family=Lilita+One&display=swap">
+<link rel="stylesheet" href="../../css/site.css">
+</head>
+<body data-game="knockout-alley">
+<header class="top">
+  <div class="container">
+    <a class="brand" href="../../index.html"><b>GIANTCLIP</b><span>FREE ONLINE GAMES</span></a>
+    <form class="search" role="search" data-home="../../index.html">
+      <input type="search" placeholder="Find a game" aria-label="Search games">
+      <button type="submit">Search Games</button>
+    </form>
+    <div class="stat"><span class="trophy">★</span><span>Your awards: <b class="award-total">0</b> of 6<br>Saved in this browser</span></div>
+  </div>
+</header>
+<nav class="nav" aria-label="Categories">
+  <div class="container">
+    <a href="../../index.html">Home</a>
+    <a href="../../index.html#action">Action Games</a>
+    <a href="../../index.html#puzzle">Puzzle Games</a>
+    <a href="../../index.html#sports" aria-current="page">Sports Games</a>
+    <a href="../../index.html#action">Racing Games</a>
+    <a href="../../index.html#puzzle">Multiplayer</a>
+  </div>
+</nav>
+
+<main class="container">
+  <div class="crumbs">
+    <nav aria-label="Breadcrumb"><a href="../../index.html">Games</a> › <a href="../../index.html#sports">Sports</a> › <strong>Knockout Alley</strong></nav>
+    <a class="next" href="../code-red-pursuit/index.html">Next: Code Red Pursuit ›</a>
+  </div>
+
+  <div class="layout">
+    <div class="stage">
+      <div class="frame"><canvas id="ka" width="800" height="600" tabindex="0" aria-label="Knockout Alley game"></canvas></div>
+
+      <div class="pad" aria-label="Touch controls">
+        <div>
+          <button type="button" class="alt" data-ka="L" aria-label="Dodge left">◀</button>
+          <button type="button" class="alt" data-ka="D" aria-label="Duck">▼</button>
+          <button type="button" class="alt" data-ka="R" aria-label="Dodge right">▶</button>
+          <button type="button" class="alt" data-ka="block">BLOCK</button>
+        </div>
+        <div>
+          <button type="button" data-ka="jab">JAB</button>
+          <button type="button" data-ka="hook">HOOK</button>
+          <button type="button" data-ka="super">★</button>
+        </div>
+      </div>
+
+      <div class="panel toolbar">
+        <div class="grp">Favorite: <button type="button" class="fav" aria-pressed="false">♥</button></div>
+        <div class="grp">Rate: <span class="rate"><button type="button" aria-label="1 star">★</button><button type="button" aria-label="2 stars">★</button><button type="button" aria-label="3 stars">★</button><button type="button" aria-label="4 stars">★</button><button type="button" aria-label="5 stars">★</button></span></div>
+        <button type="button" class="fs">Fullscreen</button>
+      </div>
+
+      <section class="panel">
+        <div class="controls">
+          <span><kbd>X</kbd> Hook</span>
+          <span><kbd>↑</kbd>+<kbd>X</kbd> Jab</span>
+          <span><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd> Dodge</span>
+          <span><kbd>Z</kbd> Block</span>
+          <span><kbd>Space</kbd> Super punch</span>
+          <span><kbd>P</kbd> Pause</span>
+        </div>
+        <p class="desc">Fight your way up the Alley with hooks and jabs. Watch their gloves: a red glow means a hook is coming, dodge away from it or duck. A yellow glow means an uppercut, so step left or right. Make them miss and they're wide open for a counter. Knock someone down three times and it's a TKO.</p>
+        <h2>Awards</h2>
+        <p class="award-count">You have won 0 of 3 awards for this game.</p>
+        <div class="awards">
+          <div class="award" data-award="ka-first"><i>1</i><span><b>First Blood</b><small>Beat Mailman Mo</small></span></div>
+          <div class="award" data-award="ka-champ"><i>2</i><span><b>Champ of the Alley</b><small>Beat Brick Malone</small></span></div>
+          <div class="award" data-award="ka-defend"><i>3</i><span><b>Long Reign</b><small>Defend the title 3 times</small></span></div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="side">
+      <section class="panel">
+        <h2>Related</h2>
+        <div class="grid">
+          <a class="tile" href="../code-red-pursuit/index.html"><canvas data-thumb="pursuit" width="320" height="240"></canvas><b>Code Red Pursuit</b></a>
+          <div class="tile soon"><canvas data-thumb="pocket" width="320" height="240"></canvas><b>Corner Pocket</b></div>
+          <div class="tile soon"><canvas data-thumb="ember" width="320" height="240"></canvas><b>Ember &amp; Tide</b></div>
+          <div class="tile soon"><canvas data-thumb="turret" width="320" height="240"></canvas><b>Turret Town</b></div>
+        </div>
+      </section>
+    </aside>
+  </div>
+</main>
+<footer>GiantClip. Progress saves in this browser.</footer>
+<script src="../../js/site.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

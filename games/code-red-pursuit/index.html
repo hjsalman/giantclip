@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Code Red Pursuit | GiantClip</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Bungee&family=Lilita+One&family=Chakra+Petch:wght@600&display=swap">
+<link rel="stylesheet" href="../../css/site.css">
+<style>
+  .frame { aspect-ratio: 16 / 10; }
+  .overlay {
+    position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 12px; text-align: center; padding: 16px; background: rgba(8, 7, 14, .78); color: #ece8ff;
+  }
+  .overlay h3 { font-family: var(--display); font-weight: 400; margin: 0; font-size: clamp(22px, 5vw, 44px); color: #ffcc33; text-shadow: 3px 3px 0 #ff3b5c; }
+  .overlay p { margin: 0; max-width: 40ch; }
+  .overlay .play { font-family: var(--display); font-size: 18px; background: #ffcc33; color: #1a1400; border: 0; padding: 12px 26px; border-radius: 6px; cursor: pointer; box-shadow: 4px 4px 0 #ff3b5c; }
+  .overlay .play:focus-visible { outline: 3px solid #fff; }
+  .best { font-weight: 800; }
+  .best b { color: var(--orange-dark); }
+</style>
+</head>
+<body data-game="code-red-pursuit">
+<header class="top">
+  <div class="container">
+    <a class="brand" href="../../index.html"><b>GIANTCLIP</b><span>FREE ONLINE GAMES</span></a>
+    <form class="search" role="search" data-home="../../index.html">
+      <input type="search" placeholder="Find a game" aria-label="Search games">
+      <button type="submit">Search Games</button>
+    </form>
+    <div class="stat"><span class="trophy">★</span><span>Your awards: <b class="award-total">0</b> of 6<br>Saved in this browser</span></div>
+  </div>
+</header>
+<nav class="nav" aria-label="Categories">
+  <div class="container">
+    <a href="../../index.html">Home</a>
+    <a href="../../index.html#action" aria-current="page">Action Games</a>
+    <a href="../../index.html#puzzle">Puzzle Games</a>
+    <a href="../../index.html#sports">Sports Games</a>
+    <a href="../../index.html#action">Racing Games</a>
+    <a href="../../index.html#puzzle">Multiplayer</a>
+  </div>
+</nav>
+
+<main class="container">
+  <div class="crumbs">
+    <nav aria-label="Breadcrumb"><a href="../../index.html">Games</a> › <a href="../../index.html#action">Racing</a> › <strong>Code Red Pursuit</strong></nav>
+    <a class="next" href="../knockout-alley/index.html">Next: Knockout Alley ›</a>
+  </div>
+
+  <div class="layout">
+    <div class="stage">
+      <div class="frame">
+        <canvas id="game" width="960" height="600" tabindex="0" aria-label="Code Red Pursuit game"></canvas>
+        <div class="overlay" id="overlay">
+          <h3 id="ovTitle">Code Red Pursuit</h3>
+          <p id="ovText">You grabbed the cash. Now every cruiser in Dockside is on your tail. Scoop up money bags, keep the car in one piece, and survive as long as you can.</p>
+          <button class="play" id="playBtn" type="button">Start engine</button>
+        </div>
+      </div>
+
+      <div class="pad" id="pad" aria-label="Touch controls">
+        <div><button type="button" class="alt" data-k="left" aria-label="Steer left">◀</button><button type="button" class="alt" data-k="right" aria-label="Steer right">▶</button></div>
+        <div><button type="button" data-k="down" aria-label="Brake">BRAKE</button><button type="button" data-k="up" aria-label="Gas">GAS</button></div>
+      </div>
+
+      <div class="panel toolbar">
+        <div class="grp">Favorite: <button type="button" class="fav" aria-pressed="false">♥</button></div>
+        <div class="grp">Rate: <span class="rate"><button type="button" aria-label="1 star">★</button><button type="button" aria-label="2 stars">★</button><button type="button" aria-label="3 stars">★</button><button type="button" aria-label="4 stars">★</button><button type="button" aria-label="5 stars">★</button></span></div>
+        <span class="best">Best run: <b id="best">0</b></span>
+        <button type="button" class="fs">Fullscreen</button>
+        <button type="button" class="fs pausebtn" id="pauseBtn" style="margin-left:0">Pause</button>
+      </div>
+
+      <section class="panel">
+        <div class="controls">
+          <span><kbd>↑</kbd> Gas</span>
+          <span><kbd>↓</kbd> Brake / reverse</span>
+          <span><kbd>←</kbd><kbd>→</kbd> Steer</span>
+          <span><kbd>Space</kbd> Handbrake drift</span>
+          <span><kbd>P</kbd> Pause</span>
+        </div>
+        <p class="desc">Lose the cops, grab the cash. Every 25 seconds your wanted level goes up and more cruisers join the chase. Money bags are worth more the hotter you are, and each one patches up your car a little.</p>
+        <h2>Awards</h2>
+        <p class="award-count">You have won 0 of 3 awards for this game.</p>
+        <div class="awards">
+          <div class="award" data-award="crp-cash"><i>1</i><span><b>Getaway Driver</b><small>Score 5,000</small></span></div>
+          <div class="award" data-award="crp-surv"><i>2</i><span><b>Most Wanted</b><small>Score 15,000</small></span></div>
+          <div class="award" data-award="crp-legend"><i>3</i><span><b>Dockside Legend</b><small>Score 40,000</small></span></div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="side">
+      <section class="panel">
+        <h2>Related</h2>
+        <div class="grid">
+          <a class="tile" href="../knockout-alley/index.html"><canvas data-thumb="knockout" width="320" height="240"></canvas><b>Knockout Alley</b></a>
+          <div class="tile soon"><canvas data-thumb="courier" width="320" height="240"></canvas><b>Sky Courier</b></div>
+          <div class="tile soon"><canvas data-thumb="turret" width="320" height="240"></canvas><b>Turret Town</b></div>
+          <div class="tile soon"><canvas data-thumb="ember" width="320" height="240"></canvas><b>Ember &amp; Tide</b></div>
+        </div>
+      </section>
+    </aside>
+  </div>
+</main>
+<footer>GiantClip. Progress saves in this browser.</footer>
+<script src="../../js/site.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
