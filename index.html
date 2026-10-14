@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GiantClip</title>
+<meta name="description" content="Free browser games in the spirit of the old after-school flash sites.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Bungee&display=swap">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<header class="top">
+  <div class="container">
+    <a class="brand" href="index.html"><b>GIANTCLIP</b><span>FREE ARCADE</span></a>
+    <form class="search" role="search">
+      <input id="q" type="search" placeholder="Search games" aria-label="Search games">
+      <button type="submit">Search</button>
+    </form>
+    <div class="stat">Free games, no downloads</div>
+  </div>
+</header>
+<nav class="nav" aria-label="Categories">
+  <div class="container">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="index.html#action">Action</a>
+    <a href="index.html#sports">Sports</a>
+    <a href="index.html#racing">Racing</a>
+    <a href="index.html#puzzle">Puzzle</a>
+    <a href="index.html#multiplayer">Multiplayer</a>
+  </div>
+</nav>
+
+<main class="container">
+  <section class="panel feature">
+    <canvas data-thumb="knockout" width="640" height="360" aria-label="Knockout Alley"></canvas>
+    <div>
+      <span class="eyebrow">New release</span>
+      <h1>Knockout Alley</h1>
+      <p>Step into the ring from behind your fighter's shoulders. Dodge hooks, duck uppercuts, counter when they miss, and work your way up five fighters to the title.</p>
+      <a class="cta" href="games/knockout-alley/index.html">Play now ▶</a>
+    </div>
+  </section>
+
+  <section class="panel" id="sports">
+    <h2>All games</h2>
+    <div class="grid">
+      <a class="tile" href="games/knockout-alley/index.html" data-name="Knockout Alley boxing sports">
+        <canvas data-thumb="knockout" width="320" height="240"></canvas>
+        <span class="badge">Hot</span>
+        <b>Knockout Alley</b><small>Sports · Boxing</small>
+      </a>
+      <a class="tile" href="games/code-red-pursuit/index.html" data-name="Code Red Pursuit police chase driving racing action" id="racing">
+        <canvas data-thumb="pursuit" width="320" height="240"></canvas>
+        <span class="badge">Hot</span>
+        <b>Code Red Pursuit</b><small>Racing · Police chase</small>
+      </a>
+      <div class="tile soon" data-name="Ember and Tide puzzle co-op multiplayer" id="puzzle">
+        <canvas data-thumb="ember" width="320" height="240"></canvas>
+        <span class="badge cool">Coming soon</span>
+        <b>Ember &amp; Tide</b><small>Puzzle · 2-player co-op</small>
+      </div>
+      <div class="tile soon" data-name="Turret Town tanks action multiplayer" id="action">
+        <canvas data-thumb="turret" width="320" height="240"></canvas>
+        <span class="badge cool">Coming soon</span>
+        <b>Turret Town</b><small>Action · Tanks</small>
+      </div>
+      <div class="tile soon" data-name="Corner Pocket pool billiards sports" id="multiplayer">
+        <canvas data-thumb="pocket" width="320" height="240"></canvas>
+        <span class="badge cool">Coming soon</span>
+        <b>Corner Pocket</b><small>Sports · Pool</small>
+      </div>
+      <div class="tile soon" data-name="Sky Courier flying action">
+        <canvas data-thumb="courier" width="320" height="240"></canvas>
+        <span class="badge cool">Coming soon</span>
+        <b>Sky Courier</b><small>Action · Flying</small>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>GiantClip. Built in Columbia, SC. Progress saves in this browser.</footer>
+<script src="js/site.js"></script>
+</body>
+</html>
